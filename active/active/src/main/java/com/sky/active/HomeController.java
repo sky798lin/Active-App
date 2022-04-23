@@ -20,7 +20,7 @@ public class HomeController {
 	@GetMapping("{tab}")
 	public String tab(@PathVariable String tab) {
 		if(Arrays.asList("tab1", "tab2", "tab3").contains(tab)) {
-			return "_" + tab;
+			return "_" + tb;
 		}
 		
 		return "empty";
