@@ -1,0 +1,34 @@
+body {
+	margin: 0;
+	font-family: arial;
+}
+
+.tabs {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333F;
+}
+
+.tabs a {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	color: white;
+	padding: 10px;
+}
+
+.tab {
+	padding: 10px;
+	float: left;
+}
+
+.tab:hover {
+	background-color: black;
+}
+
+.home {
+	padding: 10px 30px;
+	font-size: 14px;
+}
