@@ -1,4 +1,4 @@
-package com.sky.active;
+package com.sky.active.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
