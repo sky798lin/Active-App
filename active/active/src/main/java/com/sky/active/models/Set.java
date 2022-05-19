@@ -9,6 +9,12 @@ public class Set {
 	private Duration time;
 	private double distance;
 	
+	
+	/* Default constructor*/
+	public Set() {
+		
+	}
+	
 	/* Constructor for most exercise sets: lifting weight, adding weight on top
 	 * of body weight, or removing weight from body weight for assisted exercises*/
 	public Set(double weight, int reps) {
