@@ -1,17 +1,31 @@
 package com.sky.active.models;
 
-import java.time.Duration;
 import java.util.*;
 
 public class WorkoutHistory {
 	
-	public WorkoutTemplate template;
-	public Duration workoutTime;
-	public Date workoutDate;
+	private WorkoutTemplate template;
+	private Date workoutDate;
 	
-	public WorkoutHistory(WorkoutTemplate template, Duration workoutTime, Date workoutDate) {
+	public WorkoutHistory(WorkoutTemplate template, Date workoutDate) {
 		this.template = template;
-		this.workoutTime = workoutTime;
+		this.workoutDate = workoutDate;
+	}
+	
+
+	public WorkoutTemplate getTemplate() {
+		return template;
+	}
+
+	public void setTemplate(WorkoutTemplate template) {
+		this.template = template;
+	}
+
+	public Date getWorkoutDate() {
+		return workoutDate;
+	}
+
+	public void setWorkoutDate(Date workoutDate) {
 		this.workoutDate = workoutDate;
 	}
 }
