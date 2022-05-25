@@ -1,6 +1,15 @@
 body {
-	margin: 0;
+	margin:0;
 	font-family: arial;
+}
+
+main {
+	padding: 10px 30px;
+	font-size: 18px;
+}
+
+h1 {
+	padding: 0 35px;
 }
 
 .tabs {
@@ -8,13 +17,13 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #333F;
+	background-color: #0b172a;
 }
 
 .tabs a {
 	text-decoration: none;
-	color: black;
-	font-size: 20px;
+	font-size: 24px;
+	font-weight: bold;
 	color: white;
 	padding: 10px;
 }
@@ -25,10 +34,20 @@ body {
 }
 
 .tab:hover {
-	background-color: black;
+	background-color: #bc4123;
 }
 
-.home {
-	padding: 10px 30px;
-	font-size: 14px;
+.templates {
+	list-style-type: none;
+}
+
+.template {
+	float: left;
+	width: 20%;
+	height: 150px;
+	background-color: #0b172a;
+	border-radius: 15px;
+	margin: 10px;
+	padding: 20px;
+	color: white;
 }

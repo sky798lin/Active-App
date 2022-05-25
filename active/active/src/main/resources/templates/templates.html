@@ -2,14 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
-	<title>Workout Templates</title>
+	<title>Workouts</title>
 	<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 	<header>
 		<nav>
 			<ul class="tabs">
-				<li class="tab"><a href="/">Home</a></li>
+				<li class="tab"><a href="/">Active</a></li>
 				<li class="tab"><a href="/workouts">Workout</a></li>
 				<li class="tab"><a href="/history">History</a></li>
 				<li class="tab"><a href="/account">Account</a></li>
@@ -19,9 +19,10 @@
 	
 	<main>
 		<div>
-			<p th:text = "${templatesDisplay}"></p>
-			<p th:text = "${example}"></p>
-			<p>Words</p>
+			<h1>Workouts</h1>
+			<ul class="templates" th:each = "template: ${templatesDisplay.templates}">
+				<li class="template" th:text = "${template.name}"></li>
+			</ul>
 		</div>
 	</main>
 </body>
