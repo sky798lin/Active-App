@@ -12,7 +12,8 @@ import com.sky.active.models.WorkoutTemplate;
 
 @Controller
 @RequestMapping("/workouts")
-public class templateController {
+public class TemplateController {
+	
 	@GetMapping
 	public String workouts(Model model) {
 		model.addAttribute("templatesDisplay", temporaryTemplates());
@@ -46,7 +47,7 @@ public class templateController {
 		WorkoutTemplate upper = new WorkoutTemplate(upperExercises, "Upper" , "This is a note");
 		
 		WorkoutTemplate workoutA = new WorkoutTemplate(lowerExercises, "Workout A" , null);
-		WorkoutTemplate workoutB = new WorkoutTemplate(lowerExercises, "Upper" , "This is a note");
+		WorkoutTemplate workoutB = new WorkoutTemplate(lowerExercises, "This template has an extremely long name" , "This is a note");
 		WorkoutTemplate[] templates = {lower, upper, workoutA, workoutB, lower, upper, workoutA, workoutB, lower, upper, workoutA, workoutB, lower, upper, workoutA, workoutB};
 		TemplateSummaryModel templatesDisplay = new TemplateSummaryModel(templates);
 		return templatesDisplay;

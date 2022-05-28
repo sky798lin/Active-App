@@ -3,11 +3,28 @@ package com.sky.active.models;
 import java.time.Duration;
 import java.util.*;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class WorkoutHistory {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer id;
+	@Column(nullable = false)
 	private WorkoutTemplate template;
+	@Column(nullable = false)
 	private Date workoutDate;
+	@Column(nullable = false)
 	private Duration workoutTime;
+	
+	public WorkoutHistory() {
+		
+	}
 	
 	public WorkoutHistory(WorkoutTemplate template, Date workoutDate, Duration workoutTime) {
 		this.template = template;
@@ -15,7 +32,15 @@ public class WorkoutHistory {
 		this.setWorkoutTime(workoutTime);
 	}
 	
-
+	
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public WorkoutTemplate getTemplate() {
 		return template;
 	}

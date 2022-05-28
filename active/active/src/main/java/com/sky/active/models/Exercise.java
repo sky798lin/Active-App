@@ -1,11 +1,29 @@
 package com.sky.active.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Exercise {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer id;
+	@Column(unique=true, nullable = false)
 	private String name;
+	@Column(nullable = false)
 	private String description;
+	@Column(nullable = false)
 	private String equipment;
+	@Column(nullable = false)
 	private String muscleGroup;
+	
+	public Exercise() {
+		
+	}
 	
 	public Exercise(String name, String description, String equipment, String muscleGroup) {
 		this.name = name;
@@ -13,7 +31,15 @@ public class Exercise {
 		this.equipment = equipment;
 		this.muscleGroup = muscleGroup;
 	}
+	
 
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 	public String getName() {
 		return name;

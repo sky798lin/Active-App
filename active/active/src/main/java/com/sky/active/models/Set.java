@@ -2,28 +2,35 @@ package com.sky.active.models;
 
 import java.time.Duration;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Set {
 	
-	private double weight;
-	private int reps;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer id;
+	private Double weight;
+	private Integer reps;
 	private Duration time;
-	private double distance;
+	private Double distance;
 	
-	
-	/* Default constructor*/
 	public Set() {
 		
 	}
 	
 	/* Constructor for most exercise sets: lifting weight, adding weight on top
 	 * of body weight, or removing weight from body weight for assisted exercises*/
-	public Set(double weight, int reps) {
+	public Set(Double weight, Integer reps) {
 		this.weight = weight;
 		this.reps = reps;
 	}
 	
 	/* Constructor for purely body weight exercise sets*/
-	public Set(int reps) {
+	public Set(Integer reps) {
 		this.reps = reps;
 	}
 	
@@ -33,25 +40,33 @@ public class Set {
 	}
 	
 	/* Constructor for cardio exercise sets*/
-	public Set(double distance, Duration time) {
+	public Set(Double distance, Duration time) {
 		this.distance = distance;
 		this.time = time;
 	}
 	
 
-	public double getWeight() {
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+	public Double getWeight() {
 		return weight;
 	}
 
-	public void setWeight(double weight) {
+	public void setWeight(Double weight) {
 		this.weight = weight;
 	}
 
-	public int getReps() {
+	public Integer getReps() {
 		return reps;
 	}
 
-	public void setReps(int reps) {
+	public void setReps(Integer reps) {
 		this.reps = reps;
 	}
 
@@ -63,11 +78,11 @@ public class Set {
 		this.time = time;
 	}
 
-	public double getDistance() {
+	public Double getDistance() {
 		return distance;
 	}
 
-	public void setDistance(double distance) {
+	public void setDistance(Double distance) {
 		this.distance = distance;
 	}
 }
