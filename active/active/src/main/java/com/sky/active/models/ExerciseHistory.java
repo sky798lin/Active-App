@@ -1,10 +1,10 @@
 package com.sky.active.models;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class ExerciseHistory {
@@ -12,16 +12,15 @@ public class ExerciseHistory {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
-	@Column(nullable = false)
+	@ManyToOne
 	private ExerciseTemplate exercise;
-	@Column(nullable = false)
-	private Set[] sets;
+	private ExerciseSet[] sets;
 	
 	public ExerciseHistory() {
 		
 	}
 	
-	public ExerciseHistory(ExerciseTemplate exercise, Set[] sets) {
+	public ExerciseHistory(ExerciseTemplate exercise, ExerciseSet[] sets) {
 		this.exercise = exercise;
 		this.setSets(sets);
 	}
@@ -43,11 +42,11 @@ public class ExerciseHistory {
 		this.exercise = exercise;
 	}
 
-	public Set[] getSets() {
+	public ExerciseSet[] getSets() {
 		return sets;
 	}
 
-	public void setSets(Set[] sets) {
+	public void setSets(ExerciseSet[] sets) {
 		this.sets = sets;
 	}
 }

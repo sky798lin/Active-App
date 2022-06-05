@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Set {
+public class ExerciseSet {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -18,29 +18,29 @@ public class Set {
 	private Duration time;
 	private Double distance;
 	
-	public Set() {
+	public ExerciseSet() {
 		
 	}
 	
 	/* Constructor for most exercise sets: lifting weight, adding weight on top
 	 * of body weight, or removing weight from body weight for assisted exercises*/
-	public Set(Double weight, Integer reps) {
+	public ExerciseSet(Double weight, Integer reps) {
 		this.weight = weight;
 		this.reps = reps;
 	}
 	
 	/* Constructor for purely body weight exercise sets*/
-	public Set(Integer reps) {
+	public ExerciseSet(Integer reps) {
 		this.reps = reps;
 	}
 	
 	/* Constructor for purely body weight exercise sets requiring holding position*/
-	public Set(Duration time) {
+	public ExerciseSet(Duration time) {
 		this.time = time;
 	}
 	
 	/* Constructor for cardio exercise sets*/
-	public Set(Double distance, Duration time) {
+	public ExerciseSet(Double distance, Duration time) {
 		this.distance = distance;
 		this.time = time;
 	}

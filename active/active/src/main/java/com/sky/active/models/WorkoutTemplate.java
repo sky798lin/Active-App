@@ -12,9 +12,8 @@ public class WorkoutTemplate {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
-	@Column(nullable = false)
 	private ExerciseTemplate[] exercises;
-	@Column(nullable = false)
+	@Column(length = 30)
 	private String name;
 	private String notes;
 	

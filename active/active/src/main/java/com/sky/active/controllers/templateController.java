@@ -46,9 +46,9 @@ public class TemplateController {
 		ExerciseTemplate[] upperExercises = {benchPressBBUpper, inclinePressDBUpper, latPulldownUpper, facePullUpper};
 		WorkoutTemplate upper = new WorkoutTemplate(upperExercises, "Upper" , "This is a note");
 		
-		WorkoutTemplate workoutA = new WorkoutTemplate(lowerExercises, "Workout A" , null);
-		WorkoutTemplate workoutB = new WorkoutTemplate(lowerExercises, "This template has an extremely long name" , "This is a note");
-		WorkoutTemplate[] templates = {lower, upper, workoutA, workoutB, lower, upper, workoutA, workoutB, lower, upper, workoutA, workoutB, lower, upper, workoutA, workoutB};
+		WorkoutTemplate workoutA = new WorkoutTemplate(lowerExercises, "This string is 30 characters!!" , null);
+		WorkoutTemplate workoutB = new WorkoutTemplate(lowerExercises, "This template has a ridiculously long name(limit to 30 char)", "This is a note");
+		WorkoutTemplate[] templates = {lower, upper, workoutA, workoutB};
 		TemplateSummaryModel templatesDisplay = new TemplateSummaryModel(templates);
 		return templatesDisplay;
 	}

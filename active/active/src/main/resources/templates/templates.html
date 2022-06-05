@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Workout Templates</title>
 	<link rel="stylesheet" href="/styles.css">
-	<script type="text/javascript" src="/js/templateFunction.js"></script>
 </head>
 <body>
 	<header>
@@ -21,18 +20,35 @@
 	<main>
 		<div>
 			<h1>Workouts</h1>
+			
 			<button style="padding:5px; border-radius:15px; background-color: #bc4123; color:white;">
 				Workout Template +
 			</button>
 		</div>
 		
 		<div class="templates" th:each="template: ${templatesDisplay.templates}">
-			<button onclick="openModal()" class="template" th:text="${template.name}"></button>
+			<button class="template" th:text="${template.name}"></button>
 			<p class="templateDate">Date</p>
-			<div class="templateModal" th:each="exercise: ${template.exercises}">
-				<p th:text="${exercise.exercise.name}"></p>
+			
+			<div class="templateModal">
+				<div class="modalHeader">
+					<span class="closeModal">&times</span>
+					<h2 th:text="${template.name}"></h2>
+					<button>Edit</button>
+					<button>Delete</button>
+				</div>
+				<div class="modalContent">
+					<div th:each="exercise: ${template.exercises}">
+						<p th:text="${exercise.exercise.name}"></p>
+					</div>
+				</div>
+				<div class="modalFooter">
+					<button>Start Workout</button>
+				</div>
 			</div>
 		</div>
 	</main>
+	
+	<script type="text/javascript" src="/js/templateFunction.js"></script>
 </body>
 </html>

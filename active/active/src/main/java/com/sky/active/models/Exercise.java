@@ -12,13 +12,10 @@ public class Exercise {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
-	@Column(unique=true, nullable = false)
+	@Column(unique=true)
 	private String name;
-	@Column(nullable = false)
 	private String description;
-	@Column(nullable = false)
 	private String equipment;
-	@Column(nullable = false)
 	private String muscleGroup;
 	
 	public Exercise() {
