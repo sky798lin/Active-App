@@ -33,6 +33,22 @@ main {
 	background-color: #bc4123;
 }
 
+.createTemplate {
+	padding: 5px 10px;
+	border-radius: 15px;
+	background-color: #bc4123;
+	border: 2px solid black;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.createTemplate:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+	background-color: rgb(188 20 35 / .9);
+}
+
 .templates {
 	float: left;
 	margin: 20px;
@@ -83,7 +99,7 @@ main {
 	position: relative;
 	padding: 10px;
 	border: 1px solid #888;
-	width: 60%;
+	width: 50%;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -93,7 +109,7 @@ main {
 	position: relative;
 	padding: 10px;
 	border: 1px solid #888;
-	width: 60%;
+	width: 50%;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	color: white;
 }
@@ -106,11 +122,24 @@ main {
 	background-color: #0b172a;
 	margin: auto;
 	position: relative;
-	padding: 10px;
+	padding: 15px 10px;
 	border: 1px solid #888;
-	width: 60%;
+	width: 50%;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	text-align: center;
+}
+
+.modalFooter a {
+	background-color: #bc4123;
+	border-radius: 15px;
+	padding: 5px 10px;
+	text-decoration: none;
+	font-weight: bold;
 	color: white;
+}
+
+.modalFooter a:hover {
+	background-color: rgb(188 20 35 / .9);
 }
 
 .closeModal {

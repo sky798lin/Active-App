@@ -13,7 +13,6 @@ import com.sky.active.models.WorkoutTemplate;
 @Controller
 @RequestMapping("/workouts")
 public class TemplateController {
-	
 	@GetMapping
 	public String workouts(Model model) {
 		model.addAttribute("templatesDisplay", temporaryTemplates());
@@ -22,11 +21,11 @@ public class TemplateController {
 	
 	/* create temporary template display*/
 	public TemplateSummaryModel temporaryTemplates() {
-		Exercise squatBB = new Exercise("Squat (Barbell)", "Back squat using barbell", "Barbell", "Legs");
-		Exercise hipThrustBB = new Exercise("Hip Thrust (Barbell)", "Hip thrust description", "Barbell", "Legs");
-		Exercise lungeBW = new Exercise("Lunge (BodyWeight)", "Lunge description", "Reps Only", "Legs");
-		Exercise plank = new Exercise("Plank", "Standard plank", "Duration", "Core");
-		Exercise stairMaster = new Exercise("StairMaster", "Moving stairs", "Cardio", "Cardio");
+		Exercise squatBB = new Exercise("Squat (Barbell)", "Barbell", "Legs");
+		Exercise hipThrustBB = new Exercise("Hip Thrust (Barbell)", "Barbell", "Legs");
+		Exercise lungeBW = new Exercise("Lunge (BodyWeight)", "Reps Only", "Legs");
+		Exercise plank = new Exercise("Plank", "Duration", "Core");
+		Exercise stairMaster = new Exercise("StairMaster", "Cardio", "Cardio");
 		ExerciseTemplate squatBBLower = new ExerciseTemplate(squatBB, null);
 		ExerciseTemplate hipThrustBBLower = new ExerciseTemplate(hipThrustBB, "Specific Note");
 		ExerciseTemplate lungeBWLower = new ExerciseTemplate(lungeBW, null);
@@ -35,10 +34,10 @@ public class TemplateController {
 		ExerciseTemplate[] lowerExercises = {squatBBLower, hipThrustBBLower, lungeBWLower, plankLower, stairMasterLower};
 		WorkoutTemplate lower = new WorkoutTemplate(lowerExercises, "Lower" , null);
 		
-		Exercise benchPressBB = new Exercise("Bench Press (Barbell)", "Bench press description", "Barbell", "Chest");
-		Exercise inclinePressDB = new Exercise("Incline Press (Dumbbell)", "Description", "Dumbbell", "Chest");
-		Exercise latPulldown = new Exercise("Lat Pulldown (Cable)", "Wide overhand grip lat pulldown", "Cable", "Back");
-		Exercise facePull = new Exercise("Face Pull", "Description", "Cable", "Shoulders");
+		Exercise benchPressBB = new Exercise("Bench Press (Barbell)", "Barbell", "Chest");
+		Exercise inclinePressDB = new Exercise("Incline Press (Dumbbell)", "Dumbbell", "Chest");
+		Exercise latPulldown = new Exercise("Lat Pulldown (Cable)", "Cable", "Back");
+		Exercise facePull = new Exercise("Face Pull", "Cable", "Shoulders");
 		ExerciseTemplate benchPressBBUpper = new ExerciseTemplate(benchPressBB, "Some note");
 		ExerciseTemplate inclinePressDBUpper = new ExerciseTemplate(inclinePressDB, null);
 		ExerciseTemplate latPulldownUpper = new ExerciseTemplate(latPulldown, null);
